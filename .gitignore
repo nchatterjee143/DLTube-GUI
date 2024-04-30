@@ -2,6 +2,7 @@
 *.mp4
 *.webm
 *.webp
+.DS_Store
 build
 dist
 DLTube.spec
