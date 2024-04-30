@@ -1,13 +1,22 @@
-.PHONY: all check_python clean
+.PHONY: all check clean
 
-all: check_python build clean
+# Detect operating system
+ifeq ($(OS),Windows_NT)
+    PYTHON_CMD := python
+    RM_CMD := del /q /f
+else
+    PYTHON_CMD := python3
+    RM_CMD := rm -rf
+endif
 
-check_python:
+all: check build clean
+
+check:
 	@echo "Checking for Python..."
-	@if python3 --version >/dev/null 2>&1; then \
-		echo "Python 3 is installed"; \
+	@if $(PYTHON_CMD) --version >/dev/null 2>&1; then \
+		echo "Python is installed"; \
 	else \
-		echo "Python 3 is not installed"; \
+		echo "Python is not installed"; \
 		echo "Please download and install Python from https://www.python.org/downloads/"; \
 	exit 1; \
 	fi
@@ -22,4 +31,4 @@ build:
 
 clean:
 	@echo "Cleaning up..."
-	rm -rf build dist DLTube.spec
+	$(RM_CMD) build dist DLTube.spec
