@@ -10,4 +10,5 @@ GUI-based downloader for YouTube videos. Supports MP3 (with all relevant metadat
 2. `git clone https://github.com/nchatterjee143/DLTube-GUI.git`
 3. `cd DLTube-GUI` on Unix-based systems, `dir DLTube-GUI` on Windows
 4. `make`
+
 At this point the application will build itself for your computer's architecture. You will be able to see the progress of your downloads in your Terminal window. The moment you close out of the app the build will self destruct and you will need to run `make` to use the program again. Remember to `cd` or `dir` into the project directory first if you're not already there.
