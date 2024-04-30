@@ -32,7 +32,7 @@ class YouTubeDownloaderApp:
     def start_audio_download(self, query):
         try:
             self.root.title("Downloading MP3...")
-            run(['yt-dlp', '-x', '--audio-format', 'mp3', '-o', '%(title)s.%(ext)s', '--embed-thumbnail', '--embed-metadata', f'ytsearch:"{query}"'])
+            run(['yt-dlp', '-x', '--audio-format', 'mp3', '-o', '%(title)s.%(ext)s', '--embed-thumbnail', '--embed-metadata', '--no-playlist', f'ytsearch:{query}'])
             self.root.title('YouTube Downloader')
             messagebox.showinfo("Success", "Audio download completed!")
         except Exception as e:
@@ -50,7 +50,7 @@ class YouTubeDownloaderApp:
     def start_video_download(self, query):
         try:
             self.root.title("Downloading MP4...")
-            run(['yt-dlp', '--recode-video', 'mp4', '-o', '%(title)s.%(ext)s', f'ytsearch:"{query}"'])
+            run(['yt-dlp', '--recode-video', 'mp4', '-o', '%(title)s.%(ext)s', '--no-playlist', f'ytsearch:{query}'])
             self.root.title('YouTube Downloader')
             messagebox.showinfo("Success", "Video download completed!")
         except Exception as e:
