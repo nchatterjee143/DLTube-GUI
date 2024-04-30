@@ -1,5 +1,5 @@
 # DLTube-GUI
-GUI-based downloader for YouTube videos. Supports MP3 (with all relevant metadata) and MP4. Runs locally on your machine, so you don't need to rely on any websites going up or down.
+GUI-based downloader for YouTube videos based on search queries. Supports MP3 (with all relevant metadata) and MP4. Runs locally on your machine, so you don't need to rely on any websites going up or down.
 
 # Requirements
 1. Git CLI. For Windows, please download from [here](https://git-scm.com/download/win). For Linux, use `sudo apt-get install git` in a Terminal window. For MacOS, install Homebrew using `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` and then use `brew install git` in a Terminal window.
